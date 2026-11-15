@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iLikeImages — спокойный фоторедактор с вайбом 2021 и 2024</title>
+
+  <meta name="description" content="iLikeImages — лёгкий фоторедактор в браузере: зимний, летний, осенний и весенний стили, спокойный день, ночное небо и вайб 2021/2024. Без регистрации, всё локально.">
+
+  <link rel="icon" href="favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="css/style.css">
+  <link rel="stylesheet" href="css/components.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="icons/logo.png" alt="iLikeImages" class="logo">
+  </header>
+
+  <main class="site-main landing-main">
+
+    <section class="landing-cta">
+      <a href="photoeditor/index.html" class="btn btn-cta">Открыть фоторедактор</a>
+    </section>
+
+    <section class="gallery">
+      <figure class="gallery-item">
+        <img src="images/preview1.png" alt="Зимний день · Зима 2024 · Зимняя ночь">
+        <figcaption>Зимний день · Зима 2024 · Зимняя ночь</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/preview2.png" alt="Летний стиль · Вайб 2021 · Спокойный день">
+        <figcaption>Летний стиль · Вайб 2021 · Спокойный день</figcaption>
+      </figure>
+      <figure class="gallery-item">
+        <img src="images/preview3.png" alt="Весенний хороший день · Вечерний · Новый год">
+        <figcaption>Весенний хороший день · Вечерний · Новый год</figcaption>
+      </figure>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span id="year"></span>
+  </footer>
+
+  <script>
+    document.getElementById('year').textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
