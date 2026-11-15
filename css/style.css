@@ -1,0 +1,142 @@
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+:root {
+  --bg: #1b1a1e;
+  --bg-soft: #232228;
+  --bg-hover: #2c2b32;
+  --text: #e6e3df;
+  --text-dim: #a8a4a0;
+  --accent: #8a8578;
+  --radius: 8px;
+}
+
+html,
+body {
+  overflow-x: hidden;
+}
+
+body {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  font-family: 'Open Sans', sans-serif;
+  background-color: var(--bg);
+  color: var(--text);
+  line-height: 1.5;
+  padding: 0 16px;
+  -webkit-tap-highlight-color: transparent;
+}
+
+.site-header {
+  text-align: center;
+  padding: 24px 0 12px;
+}
+
+.site-header h1 {
+  font-size: 1.6rem;
+  font-weight: 700;
+  letter-spacing: 0.5px;
+  color: var(--text);
+}
+
+.site-main {
+  flex: 1;
+  width: 100%;
+  max-width: 720px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding-bottom: 24px;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 16px 0;
+  font-size: 0.85rem;
+  color: var(--text-dim);
+}
+
+.upload-area,
+.download-area {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+  justify-content: center;
+}
+
+.canvas-area {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 10px;
+}
+
+#canvas {
+  max-width: 100%;
+  height: auto;
+  border-radius: var(--radius);
+  background: var(--bg-soft);
+  display: none;
+}
+
+.hint {
+  color: var(--text-dim);
+  font-size: 0.9rem;
+  text-align: center;
+}
+
+.tools,
+.subtools {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+  justify-content: center;
+}
+
+.sliders {
+  display: flex;
+  flex-direction: column;
+  gap: 14px;
+}
+
+.slider-row {
+  display: flex;
+  flex-direction: column;
+  gap: 6px;
+  font-size: 0.9rem;
+  color: var(--text-dim);
+}
+
+.checkboxes {
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.check-row {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+  font-size: 0.95rem;
+  color: var(--text);
+  cursor: pointer;
+}
+
+@media (max-width: 480px) {
+  .site-header h1 {
+    font-size: 1.35rem;
+  }
+
+  .site-main {
+    gap: 16px;
+  }
+
+  .sliders {
+    gap: 12px;
+  }
+}
