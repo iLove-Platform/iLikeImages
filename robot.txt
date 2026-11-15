@@ -1,0 +1,6 @@
+User-agent: *
+Allow: /
+
+Disallow: /photoeditor/
+
+Sitemap: https://ilikeimages.onrender.com/sitemap.xml
