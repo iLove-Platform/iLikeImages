@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>iLikeImages — Фоторедактор</title>
+
+  <link rel="icon" href="../favicon.png" type="image/png">
+
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Open+Sans:wght@400;500;600;700&display=swap" rel="stylesheet">
+
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/cssgram@0.1.10/source/cssgram.min.css">
+
+  <link rel="stylesheet" href="../css/style.css">
+  <link rel="stylesheet" href="../css/components.css">
+</head>
+<body>
+
+  <header class="site-header">
+    <img src="../icons/logo.png" alt="iLikeImages" class="logo">
+  </header>
+
+  <main class="site-main">
+
+    <section class="upload-area">
+      <input type="file" id="fileInput" accept="image/*" hidden>
+      <button type="button" id="uploadBtn" class="btn">Выбрать фото</button>
+      <a href="../index.html" class="btn btn-back">← На главную</a>
+    </section>
+
+    <section class="canvas-area">
+      <canvas id="canvas"></canvas>
+      <p id="hint" class="hint">Загрузи фото, чтобы начать</p>
+    </section>
+
+    <section class="tools" id="tools">
+      <button type="button" class="tool-btn" data-tool="contrast">Контраст</button>
+      <button type="button" class="tool-btn" data-tool="calm">Спокойный день</button>
+      <button type="button" class="tool-btn" data-tool="summer">Летний стиль</button>
+      <button type="button" class="tool-btn" data-tool="winter">Зимний день</button>
+      <button type="button" class="tool-btn" data-tool="autumn">Осеннее утро</button>
+      <button type="button" class="tool-btn" data-tool="spring">Весенний хороший день</button>
+      <button type="button" class="tool-btn" data-tool="night">Ночное небо</button>
+    </section>
+
+    <section class="subtools" id="calmSubtools" hidden>
+      <button type="button" class="sub-btn" data-sub="comfort">Утешительность</button>
+      <button type="button" class="sub-btn" data-sub="evening">Вечерний</button>
+      <button type="button" class="sub-btn" data-sub="vibe2021">Вайб 2021</button>
+      <button type="button" class="sub-btn" data-sub="winter2024">Зима 2024</button>
+      <button type="button" class="sub-btn" data-sub="childhood">Детство</button>
+      <button type="button" class="sub-btn" data-sub="nightDay">Ночной день</button>
+    </section>
+
+    <section class="sliders">
+      <label class="slider-row">
+        <span>Яркость</span>
+        <input type="range" id="brightness" min="0" max="100" value="50">
+      </label>
+      <label class="slider-row">
+        <span>Контраст</span>
+        <input type="range" id="contrast" min="0" max="100" value="50">
+      </label>
+      <label class="slider-row">
+        <span>Насыщенность</span>
+        <input type="range" id="saturate" min="0" max="100" value="50">
+      </label>
+      <label class="slider-row">
+        <span>Тепло ↔ Холод</span>
+        <input type="range" id="warmth" min="0" max="100" value="50">
+      </label>
+      <label class="slider-row">
+        <span>Зерно</span>
+        <input type="range" id="grain" min="0" max="100" value="0">
+      </label>
+    </section>
+
+    <section class="checkboxes">
+      <label class="check-row"><input type="checkbox" data-check="goodMood"> хорошее настроение</label>
+      <label class="check-row"><input type="checkbox" data-check="greatMorning"> отличное утро</label>
+      <label class="check-row"><input type="checkbox" data-check="vibe"> вайб</label>
+      <label class="check-row"><input type="checkbox" data-check="calmDay"> спокойный день</label>
+      <label class="check-row"><input type="checkbox" data-check="noNoise"> без шума</label>
+      <label class="check-row"><input type="checkbox" data-check="alarm"> будильник</label>
+      <label class="check-row"><input type="checkbox" data-check="morning"> утро</label>
+      <label class="check-row"><input type="checkbox" data-check="colorColor"> цветовой колор</label>
+      <label class="check-row"><input type="checkbox" data-check="winterNight"> зимняя ночь</label>
+      <label class="check-row"><input type="checkbox" data-check="newYear"> Новый год</label>
+      <label class="check-row"><input type="checkbox" data-check="endOfYear"> Конец года</label>
+      <label class="check-row"><input type="checkbox" data-check="bestDay"> Самый лучший день</label>
+    </section>
+
+    <section class="download-area">
+      <button type="button" id="downloadBtn" class="btn btn-download" disabled>Скачать готовое изображение</button>
+    </section>
+
+  </main>
+
+  <footer class="site-footer">
+    <span id="year"></span>
+  </footer>
+
+  <script src="../js/filters.js" defer></script>
+  <script src="../js/canvas.js" defer></script>
+  <script src="../js/app.js" defer></script>
+
+</body>
+  </html>
